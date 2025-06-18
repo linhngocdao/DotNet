@@ -9,7 +9,7 @@
 				{
 			<div class="col-md-2 w3layouts-brand">
 					<div class="brands-w3l">
-						<p><a asp-controller="Categories" asp-action="Index">@a.Name</a></p>
+                        <p><a class="category-link" asp-controller="Categories" asp-action="Index" data-category="@a.Name">@a.Name</a></p>
 					</div>
 			</div>
                 }
@@ -18,3 +18,30 @@
 	</div>
 </div>
 <!--//brands-->
+
+
+<script>
+       $(document).ready(function() {
+        $('.category-link').click(function(e) {
+            e.preventDefault();
+            var category = $(this).data('category');
+
+            // Thêm lớp active cho danh mục được chọn
+            $('.category-link').removeClass('active');
+            $(this).addClass('active');
+
+            // Sửa URL để gọi đúng action trong HomeController
+            $.ajax({
+                url: '/Home/GetProductsByCategory', // Đã sửa từ '/Product/GetByCategory'
+                type: 'GET',
+                data: { category: category },
+                success: function(response) {
+                    $('#products-container').html(response);
+                },
+                error: function(error) {
+                    console.log('Lỗi khi tải sản phẩm:', error);
+                }
+            });
+        });
+    });
+</script>

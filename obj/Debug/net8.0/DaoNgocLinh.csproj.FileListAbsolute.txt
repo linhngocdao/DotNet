@@ -257,3 +257,4 @@ D:\WORKSPACE\Techstack\Asp.NET\DaoNgocLinh\DaoNgocLinh\bin\Debug\net8.0\runtimes
 D:\WORKSPACE\Techstack\Asp.NET\DaoNgocLinh\DaoNgocLinh\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 D:\WORKSPACE\Techstack\Asp.NET\DaoNgocLinh\DaoNgocLinh\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 D:\WORKSPACE\Techstack\Asp.NET\DaoNgocLinh\DaoNgocLinh\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+D:\WORKSPACE\Techstack\Asp.NET\DaoNgocLinh\DaoNgocLinh\obj\Debug\net8.0\DaoNgocLinh.sourcelink.json

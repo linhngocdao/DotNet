@@ -28,5 +28,10 @@ namespace DaoNgocLinh.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult GetProductsByCategory(string category)
+        {
+            return ViewComponent("Product", new { category = category });
+        }
     }
 }

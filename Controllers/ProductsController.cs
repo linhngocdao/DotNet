@@ -18,6 +18,11 @@ namespace DaoNgocLinh.Controllers
             _context = context;
         }
 
+        public IActionResult GetByCategory(string category)
+        {
+            return ViewComponent("Product", new { category = category });
+        }
+
         // GET: Products
         public async Task<IActionResult> Index()
         {
@@ -154,6 +159,7 @@ namespace DaoNgocLinh.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
 
         private bool ProductExists(string id)
         {
