@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>@ViewData["Title"] - DaoNgocLinh</title>
+	<!-- //for-mobile-apps -->
+	<link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- font-awesome icons -->
+	<link href="~/css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<!-- js -->
+	<script src="~/js/jquery-1.11.1.min.js"></script>
+	<!-- //js -->
+</head>
+<body>
+	@* @await Html.PartialAsync("DaoNgocLinh_Header") *@
+    <partial name="DaoNgocLinh_Header" />
+    @RenderBody()
+    <partial name="DaoNgocLinh_Footer" />
+
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
